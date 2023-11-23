@@ -46,7 +46,7 @@
     "deploy": "npm run build:push && npm version patch && git push --follow-tags && npm publish --tag latest",
     "lint": "eslint src --ext ts && tsc --noEmit",
     "format": "prettier --write src",
-    "preinstall": "npm run build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@commitlint/types": "^17.4.4",
